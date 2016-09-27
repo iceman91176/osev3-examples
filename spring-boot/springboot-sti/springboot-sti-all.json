@@ -34,7 +34,7 @@
                "type": "Git",
                "git": {
                   "uri": "https://github.com/iceman91176/osev3-examples.git",
-                  "ref": "master"
+                  "ref": "Test"
                },
                "contextDir": "spring-boot/springboot-sti"
             },
