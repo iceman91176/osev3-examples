@@ -10,6 +10,8 @@ ENV MVN_MIRROR http://mirror.netcologne.de/apache.org/maven/maven-3/$MAVEN_VERSI
 
 RUN yum install -y --enablerepo=centosplus \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
+    curl --silent --location https://rpm.nodesource.com/setup_4.x | bash - && \
+    yum -y install nodejs && \
     yum clean all -y && \
     (curl -0 $MVN_MIRROR | \
     tar -zx -C /usr/local) && \
